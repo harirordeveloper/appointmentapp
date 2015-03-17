@@ -1,0 +1,143 @@
+<h4 class="hidden-xs hidden-sm margin-left_70">Sign Up for Account |
+  <%= link_to("Already have a Account ? Sign in now", new_user_session_path)  %>
+</h4>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name),:html => {:class => 'form-horizontal'}) do |f| %>
+
+    <fieldset>
+
+      <ul class="login_form list-unstyled">
+
+
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="username">
+            User Name
+          </label>
+          <label class="visible-xs control-label" for="username">
+            User Name
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+              <%= f.text_field :username,:class=>" form-control"%></p>
+              <!--<input class=" form-control" id="username" name="username" placeholder="Enter Email" value="" type="text">-->
+
+              <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="email">
+            Email
+          </label>
+          <label class="visible-xs control-label" for="email">
+            Email
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+              <%= f.text_field :email,:class=>" form-control"%></p>
+              <!--<input class=" form-control" id="username" name="username" placeholder="Enter Email" value="" type="text">-->
+
+              <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+            </div>
+
+          </div>
+        </li>
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="mobile">
+            Mobile
+          </label>
+          <label class="visible-xs control-label" for="mobile">
+            Mobile
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+              <%= f.text_field :mobile,:class=>" form-control"%></p>
+              <!--<input class=" form-control" id="username" name="username" placeholder="Enter Email" value="" type="text">-->
+
+              <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="role">
+            Register As
+          </label>
+          <label class="visible-xs control-label" for="role">
+            Email
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+              <%= label :role, "Patient  " %>&nbsp&nbsp
+              <%= f.radio_button :role, "patient" , :checked => true , :value => false %>&nbsp&nbsp&nbsp
+
+              <%= label :role, "Doctor  "%>&nbsp&nbsp
+              <%= f.radio_button :role, "doctor", :value => true%>
+              <!--<input class=" form-control" id="username" name="username" placeholder="Enter Email" value="" type="text">-->
+
+
+
+            </div>
+
+          </div>
+        </li>
+
+
+
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="password">
+            Password
+          </label>
+          <label class="visible-xs control-label" for="password">
+            Password
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+
+              <% if @validatable %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off",:class=>" form-control" %>
+
+              <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+            </div>
+
+          </div>
+        </li>
+        <li class="form-group">
+          <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="password_confirmation">
+            Confirm Password
+          </label>
+          <label class="visible-xs control-label" for="password_confirmation">
+            Confirm Password
+          </label>
+          <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+            <div class="input-group">
+
+              <%= f.password_field :password_confirmation, autocomplete: "off",:class=>" form-control" %>
+
+              <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+            </div>
+
+          </div>
+        </li>
+
+
+
+
+        <div style="text-align: center; margin-left:-10px">
+          <input class="btn btn-lg btn-primary col-xs-12 col-sm-offset-3
+          col-sm-2 col-lg-2 col-lg-offset-3" value="Sign up" type="submit">
+
+          <!--<a class="hidden-xs btn  col-sm-4 col-lg-4" href="https://accounts.practo.com/forgot_password">Forgot your password?</a>-->
+        </div>
+      </ul>
+    </fieldset>
+<% end %>

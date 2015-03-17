@@ -1,0 +1,13 @@
+<h4>Doctors to Consult</h4>
+</br>
+
+<table cellspacing="20">
+    <%  @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.name %></td>
+        <td><%= doctor.mobile %></td>
+        <td><%= doctor.email %></td>
+        <td> <%= link_to 'Get Appointment', new_appointment_path(:doctorId=>doctor.id),:class=>"practo-service-action-link" %></td>
+      </tr>
+    <% end %>
+</table>

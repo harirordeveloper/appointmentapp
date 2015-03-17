@@ -1,0 +1,80 @@
+
+<h4 class="hidden-xs hidden-sm margin-left_70">Login to Your Account |
+  <%= link_to("Don't have a Account ? Sign up now", new_user_registration_path)  %>
+</h4>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name),:html => {:class => 'form-horizontal'}) do |f| %>
+
+<fieldset>
+
+  <ul class="login_form list-unstyled">
+
+
+    <li class="form-group">
+      <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="login">
+        Email
+      </label>
+      <label class="visible-xs control-label" for="login">
+        Email
+      </label>
+      <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+        <div class="input-group">
+          <%= f.text_field :login,:class=>" form-control"%></p>
+          <!--<input class=" form-control" id="username" name="username" placeholder="Enter Email" value="" type="text">-->
+
+          <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+        </div>
+
+      </div>
+    </li>
+
+
+
+    <li class="form-group">
+      <label class="hidden-xs col-sm-3 col-lg-3 control-label" for="password">
+        Password
+      </label>
+      <label class="visible-xs control-label" for="password">
+        Password
+      </label>
+      <div class="lesspadded_div col-xs-12 col-sm-5 col-lg-4 ">
+        <div class="input-group">
+          <%= f.password_field :password, autocomplete: "off",:class=>" form-control"%>
+
+          <span class="input-group-addon" style="color:#f00;" data-toggle="tooltip" title="Required">*</span>
+
+        </div>
+
+      </div>
+    </li>
+
+
+
+    <li class="form-group">
+      <div class="col-sm-offset-3 col-lg-offset-3 col-sm-10 col-lg-6 lesspadded_div">
+        <div class="checkbox">
+          <label>
+            <% if devise_mapping.rememberable? -%>
+
+                <%= f.check_box :remember_me %>
+
+
+            <% end -%>
+            <input id="remember" name="remember" value="y" type="checkbox">
+            Remember me on this computer
+          </label>
+        </div>
+      </div>
+    </li>
+
+
+
+    <div style="text-align: center; margin-left:-10px">
+      <input class="btn btn-lg btn-primary col-xs-12 col-sm-offset-3
+          col-sm-2 col-lg-2 col-lg-offset-3" value="Login" type="submit">
+    </div>
+  </ul>
+</fieldset>
+<% end %>
+
+

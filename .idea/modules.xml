@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AppointmentsApp/.idea/AppointmentsApp.iml" filepath="$PROJECT_DIR$/../AppointmentsApp/.idea/AppointmentsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appointments/.idea/appointments.iml" filepath="$PROJECT_DIR$/../appointments/.idea/appointments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hospitalApp.iml" filepath="$PROJECT_DIR$/.idea/hospitalApp.iml" />
+    </modules>
+  </component>
+</project>
