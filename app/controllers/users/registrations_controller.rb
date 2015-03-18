@@ -79,10 +79,10 @@ puts params.inspect
   #   devise_parameter_sanitizer.for(:account_update) << :attribute
   # end
 
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  #The path used after sign up.
+  def after_sign_up_path_for(resource)
+   appointments_path
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
